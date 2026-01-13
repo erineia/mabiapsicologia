@@ -255,17 +255,39 @@
     <h2>Entre em Contato</h2>
     <p class="contato-subtitle">Tire suas dúvidas ou agende sua primeira sessão</p>
     <div class="contato-container">
-     <form class="contato-form" id="contatoForm">
-      <div class="form-group"><label for="nome">Nome completo</label> <input type="text" id="nome" name="nome" required placeholder="Seu nome">
-      </div>
-      <div class="form-group"><label for="email">E-mail</label> <input type="email" id="email" name="email" required placeholder="seu@email.com">
-      </div>
-      <div class="form-group"><label for="telefone">Telefone (opcional)</label> <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
-      </div>
-      <div class="form-group"><label for="mensagem">Mensagem</label> <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como posso te ajudar?"></textarea>
-      </div><button type="submit" class="btn-submit">Enviar mensagem</button>
-      <div class="form-message" id="formMessage"></div>
-     </form>
+<form class="contato-form"
+      id="contatoForm"
+      name="contato"
+      method="POST"
+      data-netlify="true">
+
+  <input type="hidden" name="form-name" value="contato">
+
+  <div class="form-group">
+    <label for="nome">Nome completo</label>
+    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+  </div>
+
+  <div class="form-group">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required placeholder="seu@email.com">
+  </div>
+
+  <div class="form-group">
+    <label for="telefone">Telefone (opcional)</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+  </div>
+
+  <div class="form-group">
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como posso te ajudar?"></textarea>
+  </div>
+
+  <button type="submit" class="btn-submit">Enviar mensagem</button>
+
+  <div class="form-message" id="formMessage"></div>
+</form>
+
      <div class="contato-info">
       <h3>Informações de Contato</h3>
       <div class="info-item">

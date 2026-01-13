@@ -108,16 +108,22 @@
     </section>
 
 <section id="contato" class="contato">
-    <h2>Entre em Contato</h2>
-    <p class="contato-subtitle">Tire suas dúvidas ou agende sua primeira sessão</p>
-    <div class="contato-container">
-<form class="contato-form"
-      id="contatoForm"
-      name="contato"
-      method="POST"
-      data-netlify="true">
+  <h2>Entre em Contato</h2>
+  <p class="contato-subtitle">Tire suas dúvidas ou agende sua primeira sessão</p>
 
-  <input type="hidden" name="form-name" value="contato">
+  <div class="contato-container">
+    <form class="contato-form"
+          id="contatoForm"
+          name="contato"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field">
+
+      <!-- Campo obrigatório para o Netlify -->
+      <input type="hidden" name="form-name" value="contato">
+
+      <!-- Honeypot (anti-spam) -->
+      <input type="hidden" name="bot-field">
 
   <div class="form-group">
     <label for="nome">Nome completo</label>

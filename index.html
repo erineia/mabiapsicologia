@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mábia Oliveira | Psicóloga Clínica</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>@view-transition { navigation: auto;}</style>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS -->
+<link rel="stylesheet" href="./style.css">
+<script src="./script.js" defer></script>
+
+
 </head>
+
 <body>
   <!-- Loading Screen -->
   <div class="loading-screen" id="loadingScreen">
@@ -13,118 +24,225 @@
     <div class="loading-text">PSICOTERAPIA</div>
     <div class="loading-spinner"></div>
   </div>
+
   <!-- Page Content -->
   <div class="page-content">
+
     <!-- Header -->
     <header class="header">
-      <div class="logo">
-        <strong>Psicoterapia & Saúde Emocional</strong>
-      </div>
-      <nav><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a><a class="btn-whatsapp" href="#" onclick="event.preventDefault(); window.open('https://wa.me/5561998603162','_blank','noopener,noreferrer');">Agendar sessão</a></nav>
+      <div class="logo"><strong>Psicoterapia &amp; Saúde Emocional</strong></div>
+
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+        <a class="btn-whatsapp"
+           href="https://wa.me/5561998603162"
+           target="_blank"
+           rel="noopener noreferrer">
+          Agendar sessão
+        </a>
+      </nav>
     </header>
+
+    <!-- Sobre -->
     <section id="sobre" class="sobre">
       <div class="sobre-card">
-           <img src="Neia.jpg" alt="Mábia Katylenes - Psicóloga Clínica">
-           <div class="sobre-texto"><h3>Psicóloga</h3><h2>Mábia Oliveira</h2><h3>CRP 01/19960</h3><p>Atendimento psicológico voltado para o acolhimento, autoconhecimento e fortalecimento emocional.</p><p>Através de um olhar ético e humano, o processo terapêutico busca compreender suas vivências, emoções e desafios, sempre respeitando o seu tempo e suas singularidades.</p><a class="btn-primary" href="#" onclick="event.preventDefault(); window.open('https://wa.me/5561998603162','_blank','noopener,noreferrer');">Fale comigo pelo WhatsApp</a></div>
+        <img src="./Neia.jpg" alt="Mábia Oliveira - Psicóloga Clínica">
+
+        <div class="sobre-texto">
+          <h3>Psicóloga</h3>
+          <h2>Mábia Oliveira</h2>
+          <h3>CRP 01/19960</h3>
+
+          <p>Atendimento psicológico voltado para o acolhimento, autoconhecimento e fortalecimento emocional.</p>
+          <p>Através de um olhar ético e humano, o processo terapêutico busca compreender suas vivências, emoções e desafios, sempre respeitando o seu tempo e suas singularidades.</p>
+
+          <a class="btn-primary"
+             href="https://wa.me/5561998603162"
+             target="_blank"
+             rel="noopener noreferrer">
+            Fale comigo pelo WhatsApp
+          </a>
+        </div>
       </div>
-      <section class="trust-cards"><div class="trust-card">✔ Atendimento particular</div><div class="trust-card">✔ Presencial e online</div><div class="trust-card">✔ Terapia Cognitivo Comportamental</div></section>
+
+      <section class="trust-cards">
+        <div class="trust-card">✔ Atendimento particular</div>
+        <div class="trust-card">✔ Presencial e online</div>
+        <div class="trust-card">✔ Terapia Cognitivo Comportamental</div>
+      </section>
     </section>
+
     <!-- Hero -->
-    <section class="hero"><h1>Cuidar da saúde mental é um ato de coragem</h1><p>Atendimento psicológico presencial e online para adultos, crianças e adolescentes.</p></section>
+    <section class="hero">
+      <h1>Atendimento psicológico presencial e online para adultos, crianças e adolescentes.</h1>
+    </section>
+
+    <!-- Carousel -->
+    <section class="carousel-section tab-0">
+      <div class="carousel-tabs">
+        <button class="tab-button active" type="button" data-tab="0">🧠 Cuidado Emocional</button>
+        <button class="tab-button" type="button" data-tab="1">💛 Acolhimento</button>
+        <button class="tab-button" type="button" data-tab="2">🌱 Processo Terapêutico</button>
+        <button class="tab-button" type="button" data-tab="3">💬 Tratamento Humanizado</button>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-text">
+          <h2 id="carousel-title">Cuidar da saúde mental é um ato de coragem.</h2>
+        </div>
+
+        <div class="carousel-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+        </div>
+      </div>
+    </section>
+
     <!-- Serviços -->
     <section id="servicos" class="servicos">
       <h2>Serviços</h2>
-      <div class="cards"><div class="card"><h3>Terapia Individual</h3><p>A psicoterapia possibilita o autoconhecimento, a solução de conflitos e a melhora da saúde mental.</p></div><div class="card"><h3>Terapia para Adolescentes</h3><p>Acompanhamento psicológico essencial na fase de mudanças físicas e emocionais.</p></div><div class="card"><h3>Terapia Infantil</h3><p>Intervenção precoce para desenvolvimento emocional saudável.</p></div><div class="card"><h3>Terapia para Adultos</h3><p>Compreender os desafios da vida cotidiana, o manejo do estresse e a regulação emocional.</p></div></div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Terapia Individual</h3>
+          <p>A psicoterapia possibilita o autoconhecimento, a solução de conflitos e a melhora da saúde mental.</p>
+        </div>
+
+        <div class="card">
+          <h3>Terapia para Adolescentes</h3>
+          <p>Acompanhamento psicológico essencial na fase de mudanças físicas e emocionais.</p>
+        </div>
+
+        <div class="card">
+          <h3>Terapia Infantil</h3>
+          <p>Intervenção precoce para desenvolvimento emocional saudável.</p>
+        </div>
+
+        <div class="card">
+          <h3>Terapia para Adultos</h3>
+          <p>Compreender os desafios da vida cotidiana, o manejo do estresse e a regulação emocional.</p>
+        </div>
+      </div>
     </section>
-<section id="contato" class="contato">
-  <h2>Entre em Contato</h2>
-  <p class="contato-subtitle">Tire suas dúvidas ou agende sua primeira sessão</p>
 
-  <div class="contato-container">
-    <form class="contato-form"
-          id="contatoForm"
-          name="contato"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field">
+    <!-- Contato -->
+    <section id="contato" class="contato">
+      <h2>Entre em Contato</h2>
+      <p class="contato-subtitle">Tire suas dúvidas ou agende sua primeira sessão</p>
 
-      <!-- Campo obrigatório para o Netlify -->
-      <input type="hidden" name="form-name" value="contato">
+      <div class="contato-container">
+        <form class="contato-form"
+              id="contatoForm"
+              name="contato"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field">
 
-      <!-- Honeypot (anti-spam) -->
-      <input type="hidden" name="bot-field">
+          <input type="hidden" name="form-name" value="contato" />
 
-  <div class="form-group">
-    <label for="nome">Nome completo</label>
-    <input type="text" id="nome" name="nome" required placeholder="Seu nome">
-  </div>
-  <div class="form-group">
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" required placeholder="seu@email.com">
-  </div>
-  <div class="form-group">
-    <label for="telefone">Telefone (opcional)</label>
-    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
-  </div>
-  <div class="form-group">
-    <label for="mensagem">Mensagem</label>
-    <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como posso te ajudar?"></textarea>
-  </div>
-  <button type="submit" class="btn-submit">Enviar mensagem</button>
+          <!-- honeypot recomendado -->
+          <p style="display:none;">
+            <label>Não preencha este campo: <input name="bot-field" /></label>
+          </p>
 
-  <div class="form-message" id="formMessage"></div>
-</form>
-     <div class="contato-info">
-      <h3>Informações de Contato</h3>
-      <div class="info-item">
-       <div><strong>Endereço</strong>
-        <p>Sudoeste<br>
-         Brasília - DF</p>
-       </div>
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Seu nome" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required placeholder="seu@email.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="telefone">Telefone (opcional)</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como posso te ajudar?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar mensagem</button>
+          <div class="form-message" id="formMessage"></div>
+        </form>
+
+        <div class="contato-info">
+          <h3>Informações de Contato</h3>
+
+          <div class="info-item">
+            <div>
+              <strong>Endereço</strong>
+              <p>Sudoeste<br>Brasília - DF</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>WhatsApp</strong>
+              <p>
+                <a class="whatsapp-link"
+                   href="https://wa.me/5561998603162"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                  (61) 99860-3162
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Horário</strong>
+              <p>Segunda a Sexta<br>8h às 19h</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div>
+              <strong>Atendimento</strong>
+              <p>Presencial e Online<br>Exclusivamente particular</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="info-item">
-       <div><strong>WhatsApp</strong>
-        <p><a href="#" onclick="event.preventDefault(); window.open('https://wa.me/5561998603162', '_blank', 'noopener,noreferrer');" style="color: var(--sage-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;"> <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 18px; height: 18px; filter: brightness(0) invert(1);"> (61) 99860-3162 </a></p>
-       </div>
-      </div>
-      <div class="info-item">
-       <div><strong>Horário</strong>
-        <p>Segunda a Sexta<br>
-         8h às 19h</p>
-       </div>
-      </div>
-      <div class="info-item">
-       <div><strong>Atendimento</strong>
-        <p>Presencial e Online<br>
-         Exclusivamente particular</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-      <div class="social-links" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 12px;">
+      <div class="social-links">
         <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width: 20px; height: 20px; filter: grayscale(1) brightness(0.5); transition: filter 0.3s;">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
         </a>
         <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width: 20px; height: 20px; filter: grayscale(1) brightness(0.5); transition: filter 0.3s;">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
         </a>
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width: 20px; height: 20px; filter: grayscale(1) brightness(0.5); transition: filter 0.3s;">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
         </a>
       </div>
-      <p>© 2026 — Mábia Oliveira • Psicóloga Clínica</p>
+
+      <p>© 2026 ✨ Mábia Oliveira • Psicóloga Clínica</p>
     </footer>
   </div>
+
   <!-- WhatsApp Float -->
-  <a href="#" class="whatsapp-float"
-     onclick="event.preventDefault(); window.open('https://wa.me/5561998603162','_blank','noopener,noreferrer');">
+  <a href="https://wa.me/5561998603162"
+     class="whatsapp-float"
+     id="whatsappFloat"
+     target="_blank"
+     rel="noopener noreferrer">
     <div class="whatsapp-tooltip" id="whatsTooltip">Atendimento presencial e online</div>
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
-  <!-- JS -->
-  <script src="script.js"></script>
+
+  <!-- Seu JS -->
 </body>
 </html>

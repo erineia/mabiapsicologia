@@ -44,7 +44,6 @@ if (form) {
     const formData = new FormData(form);
 
     try {
-      // Netlify Forms recebe POST na própria página
       const res = await fetch('/', {
         method: 'POST',
         body: formData,

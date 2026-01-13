@@ -2,7 +2,6 @@
 function abrirWhats() {
   window.open('https://wa.me/5561998603162', '_blank', 'noopener,noreferrer');
 }
-
 // Loading screen
 window.addEventListener('load', () => {
   const loadingScreen = document.getElementById('loadingScreen');
@@ -30,7 +29,6 @@ temaCards.forEach((card) => {
   });
 });
 
-// Formulário → E-mail (Netlify Forms)
 const form = document.getElementById('contatoForm');
 const formMessage = document.getElementById('formMessage');
 

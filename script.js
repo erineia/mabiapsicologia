@@ -30,27 +30,37 @@ temaCards.forEach((card) => {
   });
 });
 
-// Formulário → WhatsApp
+// Formulário → E-mail (Netlify Forms)
 const form = document.getElementById('contatoForm');
 const formMessage = document.getElementById('formMessage');
 
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
+    formMessage.textContent = 'Enviando mensagem...';
+    formMessage.className = 'form-message';
 
-    const texto = `Olá!%0A*Nome:* ${nome}%0A*E-mail:* ${email}%0A*Mensagem:* ${mensagem}`;
+    const formData = new FormData(form);
 
-    window.open(
-      `https://wa.me/5561998603162?text=${encodeURIComponent(texto)}`,
-      '_blank',
-      'noopener,noreferrer',
-    );
+    try {
+      // Netlify Forms recebe POST na própria página
+      const res = await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
 
-    formMessage.textContent = 'Redirecionando para o WhatsApp...';
-    formMessage.className = 'form-message success';
+      if (res.ok) {
+        formMessage.textContent = 'Mensagem enviada com sucesso! 😊';
+        formMessage.className = 'form-message success';
+        form.reset();
+      } else {
+        formMessage.textContent = 'Não foi possível enviar. Tente novamente.';
+        formMessage.className = 'form-message error';
+      }
+    } catch (err) {
+      formMessage.textContent = 'Erro de conexão. Tente novamente.';
+      formMessage.className = 'form-message error';
+    }
   });
 }

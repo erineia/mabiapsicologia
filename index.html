@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mábia Katylenes | Psicóloga Clínica</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- View Transitions -->
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">Mábia Katylenes</div>
+    <div class="loading-text">PSICOTERAPIA</div>
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Page Content -->
+  <div class="page-content">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <strong>Psicoterapia & Saúde Emocional</strong>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#temas">Temas</a>
+        <a href="#contato">Contato</a>
+        <a class="btn-whatsapp" href="#"
+           onclick="event.preventDefault(); window.open('https://wa.me/5561998603162','_blank','noopener,noreferrer');">
+          Agendar sessão
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Cuidar da saúde mental é um ato de coragem</h1>
+      <p>Atendimento psicológico presencial e online para adultos e casais.</p>
+      <a class="btn-primary" href="#"
+         onclick="event.preventDefault(); window.open('https://wa.me/5561998603162','_blank','noopener,noreferrer');">
+        Fale comigo pelo WhatsApp
+      </a>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+      <div class="sobre-card">
+        <img src="Neia.jpg" alt="Mábia Katylenes - Psicóloga Clínica">
+        <div class="sobre-texto">
+          <h3>Psicóloga</h3>
+          <h2>Mábia Katylenes da Silva</h2>
+          <h3>CRP 01/010101</h3>
+          <p>Atendimento psicológico voltado para o acolhimento, autoconhecimento e fortalecimento emocional.</p>
+          <p>Através de um olhar ético e humano, o processo terapêutico busca compreender suas vivências, emoções e desafios, sempre respeitando o seu tempo e suas singularidades.</p>
+        </div>
+      </div>
+
+      <section class="trust-cards">
+        <div class="trust-card">✔ Atendimento particular</div>
+        <div class="trust-card">✔ Presencial e online</div>
+        <div class="trust-card">✔ Adultos</div>
+        <div class="trust-card">✔ Terapia Cognitivo Comportamental</div>
+      </section>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+      <h2>Serviços</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Terapia Individual</h3>
+          <p>A psicoterapia possibilita o autoconhecimento, a solução de conflitos e a melhora da saúde mental.</p>
+        </div>
+        <div class="card">
+          <h3>Terapia para Adolescentes</h3>
+          <p>Acompanhamento psicológico essencial na fase de mudanças físicas e emocionais.</p>
+        </div>
+        <div class="card">
+          <h3>Terapia Infantil</h3>
+          <p>Intervenção precoce para desenvolvimento emocional saudável.</p>
+        </div>
+        <div class="card">
+          <h3>Terapia para Idosos</h3>
+          <p>Apoio emocional para lidar com solidão, ansiedade e depressão.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Temas -->
+   <section id="temas" class="temas">
+  <h2>Temas que Trabalho</h2>
+  <p class="temas-subtitle">Clique em cada tema para saber mais</p>
+
+  <div class="temas-grid">
+
+    <div class="tema-card" data-tema="ansiedade">
+      <div class="tema-header">
+        <h3>Ansiedade</h3>
+        <span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+        <p>Sentimentos constantes de preocupação, nervosismo e inquietação que interferem no dia a dia.</p>
+      </div>
+    </div>
+
+    <div class="tema-card" data-tema="relacionamento">
+      <div class="tema-header">
+        <h3>Problemas de Relacionamento</h3>
+        <span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+        <p>Dificuldades na comunicação, conflitos constantes ou padrões prejudiciais nos relacionamentos.</p>
+      </div>
+    </div>
+
+    <div class="tema-card" data-tema="depressao">
+      <div class="tema-header">
+        <h3>Depressão</h3>
+        <span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+        <p>Tristeza profunda, perda de interesse nas atividades e falta de energia.</p>
+      </div>
+    </div>
+
+    <div class="tema-card" data-tema="estresse">
+      <div class="tema-header">
+        <h3>Estresse</h3>
+        <span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+        <p>Pressão excessiva do trabalho, estudos ou vida pessoal que causa esgotamento físico e mental.</p>
+      </div>
+    </div>
+
+    <div class="tema-card" data-tema="burnout">
+      <div class="tema-header">
+        <h3>Burnout</h3>
+        <span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+        <p>Esgotamento profissional caracterizado por exaustão extrema.</p>
+      </div>
+    </div>
+
+    <div class="tema-card" data-tema="toc">
+      <div class="tema-header">
+        <h3>TOC</h3>
+        <span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+        <p>Pensamentos obsessivos e comportamentos compulsivos.</p>
+      </div>
+    </div>
+<div class="tema-card" data-tema="ciumes">
+      <div class="tema-header">
+       <h3>Ciúmes</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Sentimentos intensos de insegurança e possessividade que prejudicam relacionamentos. Trabalho focado em construir confiança, autoestima e relacionamentos mais saudáveis.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="medo">
+      <div class="tema-header">
+       <h3>Medo</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Medos irracionais ou fobias específicas que limitam sua vida. Técnicas comprovadas para enfrentar e superar medos, recuperando sua liberdade e confiança.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="raiva">
+      <div class="tema-header">
+       <h3>Raiva</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Explosões de raiva ou dificuldade em controlar a irritação. Aprenda a identificar gatilhos, expressar emoções de forma saudável e desenvolver autocontrole emocional.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="panico">
+      <div class="tema-header">
+       <h3>Pânico</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Crises súbitas de medo intenso acompanhadas de sintomas físicos. Tratamento eficaz para compreender e controlar ataques de pânico, reduzindo sua frequência e intensidade.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="autoestima">
+      <div class="tema-header">
+       <h3>Baixa Autoestima</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Percepção negativa de si mesmo que afeta todas as áreas da vida. Trabalho para reconhecer seu valor, desenvolver autoconfiança e construir uma imagem positiva de si mesmo.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="inseguranca">
+      <div class="tema-header">
+       <h3>Insegurança</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Dúvidas constantes sobre suas capacidades e decisões. Fortalecimento da confiança pessoal e desenvolvimento de uma base sólida de autoaceitação e segurança interna.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="solidao">
+      <div class="tema-header">
+       <h3>Solidão</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Sentimento de isolamento e desconexão, mesmo quando rodeado de pessoas. Trabalho para desenvolver conexões significativas e encontrar conforto consigo mesmo.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="decisoes">
+      <div class="tema-header">
+       <h3>Dificuldade em Tomar Decisões</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Paralisia diante de escolhas ou medo constante de errar. Desenvolvimento de clareza mental, autoconfiança e estratégias práticas para tomar decisões mais assertivas.</p>
+      </div>
+     </div>
+     <div class="tema-card" data-tema="vicios">
+      <div class="tema-header">
+       <h3>Vícios</h3><span class="tema-toggle">+</span>
+      </div>
+      <div class="tema-content">
+       <p>Dependências químicas ou comportamentais que afetam sua saúde e relações. Tratamento especializado para compreender as causas, desenvolver autocontrole e construir uma vida livre de vícios.</p>
+      </div>
+     </div>
+    </div>
+    <div style="margin-top: 50px;">
+    </div>
+  </div>
+
+    <div style="margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+      <a class="btn-primary" href="#" onclick="event.preventDefault(); window.open('https://wa.me/5561998603162?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão.', '_blank', 'noopener,noreferrer');">Agendar uma sessão</a>
+    </div>
+</section>
+<section id="contato" class="contato">
+    <h2>Entre em Contato</h2>
+    <p class="contato-subtitle">Tire suas dúvidas ou agende sua primeira sessão</p>
+    <div class="contato-container">
+     <form class="contato-form" id="contatoForm">
+      <div class="form-group"><label for="nome">Nome completo</label> <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+      </div>
+      <div class="form-group"><label for="email">E-mail</label> <input type="email" id="email" name="email" required placeholder="seu@email.com">
+      </div>
+      <div class="form-group"><label for="telefone">Telefone (opcional)</label> <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+      </div>
+      <div class="form-group"><label for="mensagem">Mensagem</label> <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Como posso te ajudar?"></textarea>
+      </div><button type="submit" class="btn-submit">Enviar mensagem</button>
+      <div class="form-message" id="formMessage"></div>
+     </form>
+     <div class="contato-info">
+      <h3>Informações de Contato</h3>
+      <div class="info-item">
+       <div><strong>Endereço</strong>
+        <p>Sudoeste<br>
+         Brasília - DF</p>
+       </div>
+      </div>
+      <div class="info-item">
+       <div><strong>WhatsApp</strong>
+        <p><a href="#" onclick="event.preventDefault(); window.open('https://wa.me/5561998603162', '_blank', 'noopener,noreferrer');" style="color: var(--sage-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;"> <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width: 18px; height: 18px; filter: brightness(0) invert(1);"> (61) 99860-3162 </a></p>
+       </div>
+      </div>
+      <div class="info-item">
+       <div><strong>Horário</strong>
+        <p>Segunda a Sexta<br>
+         8h às 19h</p>
+       </div>
+      </div>
+      <div class="info-item">
+       <div><strong>Atendimento</strong>
+        <p>Presencial e Online<br>
+         Exclusivamente particular</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 — Mábia Katylenes • Psicóloga Clínica</p>
+    </footer>
+
+  </div>
+
+  <!-- WhatsApp Float -->
+  <a href="#" class="whatsapp-float"
+     onclick="event.preventDefault(); window.open('https://wa.me/5561998603162','_blank','noopener,noreferrer');">
+    <div class="whatsapp-tooltip" id="whatsTooltip">Atendimento presencial e online</div>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

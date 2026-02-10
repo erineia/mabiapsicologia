@@ -151,9 +151,13 @@ if (carouselSection) {
 updateCarousel();
 startCarouselAutoplayWithTabs();
 
-// Loading screen
+// Loading screen (somente em páginas que têm #loadingScreen)
 window.addEventListener('load', () => {
   const loadingScreen = document.getElementById('loadingScreen');
+
+  // Se não houver tela de loading (páginas legais, por exemplo), não faz nada
+  if (!loadingScreen) return;
+
   document.body.classList.add('loading');
 
   setTimeout(() => {

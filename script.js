@@ -434,3 +434,92 @@ window.addEventListener('resize', updateHeaderHeights);
 if (window.visualViewport) {
   window.visualViewport.addEventListener('resize', updateHeaderHeights);
 }
+
+// ============================ Proteção WhatsApp (reCAPTCHA) ============================
+let pendingWhatsAppUrl = null;
+let whatsappHumanVerified = false;
+
+function openWhatsAppVerification(url) {
+  const overlay = document.getElementById('whatsappVerificationOverlay');
+  const continueBtn = document.getElementById('whatsappContinue');
+
+  if (!overlay || !continueBtn) {
+    // Se por algum motivo o modal não existir, abre direto
+    window.open(url, '_blank');
+    return;
+  }
+
+  pendingWhatsAppUrl = url;
+  whatsappHumanVerified = false;
+  continueBtn.disabled = true;
+
+  overlay.classList.add('show');
+  overlay.setAttribute('aria-hidden', 'false');
+
+  if (typeof grecaptcha !== 'undefined') {
+    try {
+      grecaptcha.reset();
+    } catch {
+      // ignora falha no reset
+    }
+  }
+}
+
+function closeWhatsAppVerification() {
+  const overlay = document.getElementById('whatsappVerificationOverlay');
+  if (!overlay) return;
+  overlay.classList.remove('show');
+  overlay.setAttribute('aria-hidden', 'true');
+  pendingWhatsAppUrl = null;
+}
+
+// Callback chamado pelo reCAPTCHA (definido em data-callback)
+function onWhatsAppCaptchaSuccess() {
+  whatsappHumanVerified = true;
+  const continueBtn = document.getElementById('whatsappContinue');
+  if (continueBtn) continueBtn.disabled = false;
+}
+
+// Torna a função acessível no escopo global para o reCAPTCHA
+// eslint-disable-next-line no-undef
+window.onWhatsAppCaptchaSuccess = onWhatsAppCaptchaSuccess;
+
+// Ligações de eventos após o DOM estar pronto
+window.addEventListener('load', () => {
+  // Intercepta todos os links que apontam para o WhatsApp
+  const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
+
+  whatsappLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const url = link.href;
+      if (!url) return;
+      openWhatsAppVerification(url);
+    });
+  });
+
+  const continueBtn = document.getElementById('whatsappContinue');
+  if (continueBtn) {
+    continueBtn.addEventListener('click', () => {
+      if (!whatsappHumanVerified || !pendingWhatsAppUrl) return;
+      window.open(pendingWhatsAppUrl, '_blank');
+      closeWhatsAppVerification();
+    });
+  }
+
+  const closeBtn = document.querySelector('.whatsapp-verification-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      closeWhatsAppVerification();
+    });
+  }
+
+  const overlay = document.getElementById('whatsappVerificationOverlay');
+  if (overlay) {
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        closeWhatsAppVerification();
+      }
+    });
+  }
+});

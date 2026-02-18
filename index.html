@@ -393,6 +393,48 @@
       />
     </a>
 
+    <!-- Modal de verificação para WhatsApp -->
+    <div
+      id="whatsappVerificationOverlay"
+      class="whatsapp-verification-overlay"
+      aria-hidden="true"
+    >
+      <div class="whatsapp-verification-modal" role="dialog" aria-modal="true">
+        <button
+          type="button"
+          class="whatsapp-verification-close"
+          aria-label="Fechar verificação"
+        >
+          ×
+        </button>
+        <h3>Confirme que você não é um robô</h3>
+        <p>
+          Por segurança, faça a verificação antes de abrir a conversa no
+          WhatsApp.
+        </p>
+        <div
+          class="g-recaptcha"
+          data-sitekey="SUA_CHAVE_DO_RECAPTCHA_AQUI"
+          data-callback="onWhatsAppCaptchaSuccess"
+        ></div>
+        <button
+          id="whatsappContinue"
+          type="button"
+          class="btn-primary whatsapp-continue"
+          disabled
+        >
+          Continuar para o WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- reCAPTCHA v2 (substitua pela sua chave de site em data-sitekey) -->
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      async
+      defer
+    ></script>
+
     <!-- Seu JS -->
     <script src="./script.js"></script>
   </body>
